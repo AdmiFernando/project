@@ -91,7 +91,6 @@ const App = () => {
         <section className="bg-white w-full shadow-section
           flex flex-row"> 
 
-
         <div className="flex flex-col w-[35%]">
           <header className="h-[70px] w-full pl-20 pt-10">
             <h1 className="text-5xl">
@@ -153,7 +152,7 @@ const App = () => {
         </div>
         </section>
 
-        {/* -I dont know howtosay "cuarto" in english- section - Footer */}
+        {/* Section - Footer */}
         <section className="flex w-full h-full relative shadow-section">
           <article className="w-[40%] flex flex-col justify-center px-16 gap-10 bg-[#062132] text-left pt-48 pb-24">
             <h2 className="text-white font-extrabold text-5xl pb-6">
