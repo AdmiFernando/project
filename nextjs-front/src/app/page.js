@@ -40,7 +40,7 @@ const App = () => {
         </section>
 
         {/* Second section - About */}
-        <section className="bg-[#062132] w-full py-10 shadow-section text-white">  
+        <section className="bg-[#062132] w-full py-10 shadow-section text-white" id="about">  
           <header className="text-center">
             <h1 className="text-5xl">About Us</h1>
           </header>
@@ -89,7 +89,7 @@ const App = () => {
 
         {/* Third section - Expertise */}
         <section className="bg-white w-full shadow-section
-          flex flex-row"> 
+          flex flex-row" id="expertise"> 
 
         <div className="flex flex-col w-[35%]">
           <header className="h-[70px] w-full pl-20 pt-10">
@@ -153,7 +153,7 @@ const App = () => {
         </section>
 
         {/* Section - Footer */}
-        <section className="flex w-full h-full relative shadow-section">
+        <section className="flex w-full h-full relative shadow-section" id="contact">
           <article className="w-[40%] flex flex-col justify-center px-16 gap-10 bg-[#062132] text-left pt-48 pb-24">
             <h2 className="text-white font-extrabold text-5xl pb-6">
               Get in touch.
