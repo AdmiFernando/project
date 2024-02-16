@@ -1,10 +1,19 @@
+'use client'
 import React from "react";
 import Header from "./components/header";
 import Image from "next/image";
-
+import { useState } from "react";
 
 
 const App = () => {
+
+    const [showMenu, setShowMenu] = useState(Array(3).fill(false));
+  
+    const handleClick = (index) => {
+    const newShowMenu = [...showMenu];
+    newShowMenu[index] = !showMenu[index];
+    setShowMenu(newShowMenu);
+    }
   return (
     <div>
 
@@ -88,68 +97,57 @@ const App = () => {
         </section>
 
         {/* Third section - Expertise */}
-        <section className="bg-white w-full shadow-section
-          flex flex-row" id="expertise"> 
+        <section className="bg-white w-full h-auto shadow-section p-4" id="expertise"> 
+            
+        {/* <div>
+          {items.map((item, index) => (
+            <div key={item.id} className="relative">
+              <button onClick={() => handleClick(index)}>
+                {item.label}
+              </button>
+              {showMenu[index] && (
+              <div className="absolute top-0 right-0 z-50 p-4 bg-white rounded-md shadow-md">
+                <ul>
+                  {item.subitems.map((subitem) => (
+                    <li key={subitem.id}>
+                      <a href="#">{subitem.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              )}
+            </div>
+          ))}
+        </div> */}
 
-        <div className="flex flex-col w-[35%]">
-          <header className="h-[70px] w-full pl-20 pt-10">
-            <h1 className="text-5xl">
-              Expertise
+        {items.map((item, index) => (
+        <article className="flex flex-col gap-4">
+          
+          <header>
+           <button onClick={() => handleClick(index)}>
+            <h1 className="flex gap-4 text-xl font-semibold items-center">
+              {item.label}
+              <span className="block">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7m14-8l-7 7-7-7"/>
+                </svg>
+              </span>
             </h1>
+           </button>
           </header>
-
-          <div className="flex flex-col gap-24 mt-10 px-6">
-            <article className="row-start-2 flex flex-col gap-2">
-              <h5 className="text-[1.3rem] tracking-wider font-bold">
-                HI7 interoperability
-              </h5>
-              <p className="font-black text-[18px] tracking-wider leading-7">
-                On sait depuis longtemps que travailleravec du texte lisible et contenant du sensest source de distractions, et empêche dese concentrer sur la mise en page ellemême.
-              </p>
-            </article>
-            <article className="row-start-2 flex flex-col gap-2">
-              <h5 className="text-[1.3rem] tracking-wider font-bold">
-                HI7 interoperability
-              </h5>
-              <p className="font-black text-[18px] tracking-wider leading-7">
-                On sait depuis longtemps que travailleravec du texte lisible et contenant du sensest source de distractions, et empêche dese concentrer sur la mise en page ellemême.
-              </p>
-            </article>
-          </div>
-
-        </div>
-
-        <div className="w-[30%]">
-          <Image 
-            src='/code-banner.jpg' 
-            alt='code banner'
-            width={1920}
-            height={1080}
-          />
-        </div>
-
-        <div className="w-[35%] ">
-          <header className="h-[70px] w-full">
-          </header>
-          <div className="flex flex-col gap-24 mt-10 px-6">
-            <article className="row-start-2 flex flex-col gap-2">
-                <h5 className="text-[1.3rem] tracking-wider font-bold">
-                  HI7 interoperability
-                </h5>
-                <p className="font-black text-[18px] tracking-wider leading-7">
-                  On sait depuis longtemps que travailleravec du texte lisible et contenant du sensest source de distractions, et empêche dese concentrer sur la mise en page ellemême.
+          {showMenu[index] && (
+            <section className="flex gap-2">
+              {item.content.map((content) => (
+              <div className="w-52 h-48 bg-black text-white p-2">
+                <p>
+                  {content.sub_content}
                 </p>
-              </article>
-              <article className="row-start-2 flex flex-col gap-2">
-                <h5 className="text-[1.3rem] tracking-wider font-bold">
-                  HI7 interoperability
-                </h5>
-                <p className="font-black text-[18px] tracking-wider leading-7">
-                  On sait depuis longtemps que travailleravec du texte lisible et contenant du sensest source de distractions, et empêche dese concentrer sur la mise en page ellemême.
-                </p>
-            </article>
-          </div>
-        </div>
+              </div>
+              ))}
+            </section>
+          )}
+        </article>
+        ))}
         </section>
 
         {/* Section - Footer */}
@@ -187,5 +185,53 @@ const App = () => {
     </div>
   );
 };
+
+
+const items = [
+  {
+    id: 1,
+    label: "Languages/Frameworks",
+    content: [
+      {
+        id: 2,
+        sub_content: "Contenido",
+      },
+      {
+        id: 3,
+        sub_content: "Ejemplo",
+      },
+    ],
+  },
+  {
+    id: 4,
+    label: "Languages/Frameworks",
+    content: [
+      {
+        id: 5,
+        sub_content: "Contenido",
+      },
+      {
+        id: 6,
+        sub_content: "Ejemplo",
+      },
+    ],
+  },
+  {
+    id: 7,
+    label: "Languages/Frameworks",
+    content: [
+      {
+        id: 8,
+        sub_content: "Contenido",
+      },
+      {
+        id: 9,
+        sub_content: "Ejemplo",
+      },
+    ],
+  },
+];
+
+
 
 export default App;

@@ -31,7 +31,7 @@ const Header = () => {
           </button>
         </nav>
 
-        <div className={isActive ? "fixed h-[100vh] w-full bg-[rgba(0,0,0,.7)] left-0 bottom-0 duration-500 transition-all translate-y-[0vh]" : "duration-700 w-full h-[100vh] left-0 bottom-0 transition-all absolute -translate-y-[100vh]"}>
+        <div onClick={() => setIsActive(!isActive)} className={isActive ? "fixed h-[100vh] w-full bg-[rgba(0,0,0,.7)] left-0 bottom-0 duration-500 transition-all translate-y-[0vh]" : "duration-700 w-full h-[100vh] left-0 bottom-0 transition-all absolute -translate-y-[100vh]"}>
           <ul className="flex justify-center items-center flex-col h-full text-white gap-8 text-2xl">
             <NavLink href="#">Home</NavLink>
             <NavLink href="#">Services</NavLink>
