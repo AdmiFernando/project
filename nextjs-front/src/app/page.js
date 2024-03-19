@@ -2,18 +2,51 @@
 import React from "react";
 import Header from "./components/header";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const App = () => {
+      const [showMenu, setShowMenu] = useState(Array(3).fill(false));
+    
+      const handleClick = (index) => {
+        const newShowMenu = [...showMenu];
+        newShowMenu[index] = !showMenu[index];
+        setShowMenu(newShowMenu);
+      }
 
-    const [showMenu, setShowMenu] = useState(Array(3).fill(false));
-  
-    const handleClick = (index) => {
-    const newShowMenu = [...showMenu];
-    newShowMenu[index] = !showMenu[index];
-    setShowMenu(newShowMenu);
-    }
+
+
+
+      const [hl7Data, setHL7Data] = useState('');
+      const [jsonData, setJsonData] = useState('');
+    
+      const handleHL7Change = async (event) => {
+        const hl7Data = event.target.value;
+        setHL7Data(hl7Data);
+    
+        try {
+          const response = await fetch('http://localhost:8080/hl7tojson', {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain' },
+            body: hl7Data
+          });
+    
+          if (!response.ok) {
+            throw new Error(`Error enviando HL7 data: ${response.status}`);
+          }
+    
+          const jsonData = await response.json();
+          setJsonData(jsonData);
+    
+          // Mostrar mensaje de éxito al usuario
+        } catch (error) {
+          console.error('Error:', error);
+    
+          // Mostrar mensaje de error al usuario
+        }
+      };
+
+
   return (
     <div>
 
@@ -22,7 +55,7 @@ const App = () => {
       </header> 
       
       <main className="flex flex-col gap-3 px-1">
-
+     
         {/* First section - Home */}
         <section className="flex lg:h-auto h-[100vh] md:h-[600px] relative shadow-section">
 
@@ -98,29 +131,8 @@ const App = () => {
 
         {/* Third section - Expertise */}
         <section className="bg-white w-full h-auto shadow-section p-4" id="expertise"> 
-            
-        {/* <div>
-          {items.map((item, index) => (
-            <div key={item.id} className="relative">
-              <button onClick={() => handleClick(index)}>
-                {item.label}
-              </button>
-              {showMenu[index] && (
-              <div className="absolute top-0 right-0 z-50 p-4 bg-white rounded-md shadow-md">
-                <ul>
-                  {item.subitems.map((subitem) => (
-                    <li key={subitem.id}>
-                      <a href="#">{subitem.label}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              )}
-            </div>
-          ))}
-        </div> */}
 
-        {items.map((item, index) => (
+        {/* {items.map((item, index) => (
         <article className="flex flex-col gap-4">
           
           <header>
@@ -128,7 +140,7 @@ const App = () => {
             <h1 className="flex gap-4 text-xl font-semibold items-center">
               {item.label}
               <span className="block">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7m14-8l-7 7-7-7"/>
                 </svg>
               </span>
@@ -147,8 +159,41 @@ const App = () => {
             </section>
           )}
         </article>
-        ))}
+        ))} */}
+
+
+         {items.map((item, index) => (
+        <article className="flex flex-col gap-4">
+          
+          <header>
+           <button onClick={() => handleClick(index)}>
+            <h1 className="flex gap-4 text-xl font-semibold items-center">
+              Title
+              <span className="block">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7m14-8l-7 7-7-7"/>
+                </svg>
+              </span>
+            </h1>
+           </button>
+          </header>
+          {showMenu[index] && (
+            <section className="flex gap-2">
+              <form className="">
+                <textarea className="w-52 h-48 bg-black text-white p-2" id="hl7Data" name="hl7Data" onKeyUp={handleHL7Change}></textarea>
+              </form>
+              <div className="w-[700px] h-48 bg-black text-white p-2 overflow-y-scroll">
+                <pre>{JSON.stringify(jsonData, null, 2)}</pre>
+              </div>
+            </section>
+          )}
+        </article>
+        ))} 
+
+
         </section>
+
+        
 
         {/* Section - Footer */}
         <section className="flex w-full h-full relative shadow-section" id="contact">
@@ -182,6 +227,7 @@ const App = () => {
         </section>
 
       </main>
+      
     </div>
   );
 };

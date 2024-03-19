@@ -10,9 +10,11 @@
     scroll-behavior: smooth;
 }
 
+
 body{
     background: rgba(0, 0, 0, .68);
 }
+
 
 .shadow-section{
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
