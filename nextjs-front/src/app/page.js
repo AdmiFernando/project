@@ -15,8 +15,6 @@ const App = () => {
       }
 
 
-
-
       const [hl7Data, setHL7Data] = useState('');
       const [jsonData, setJsonData] = useState('');
     
@@ -34,15 +32,13 @@ const App = () => {
           if (!response.ok) {
             throw new Error(`Error enviando HL7 data: ${response.status}`);
           }
-    
           const jsonData = await response.json();
           setJsonData(jsonData);
-    
-          // Mostrar mensaje de éxito al usuario
+
+
+          console.log(jsonData.msh)
         } catch (error) {
           console.error('Error:', error);
-    
-          // Mostrar mensaje de error al usuario
         }
       };
 
@@ -132,36 +128,6 @@ const App = () => {
         {/* Third section - Expertise */}
         <section className="bg-white w-full h-auto shadow-section p-4" id="expertise"> 
 
-        {/* {items.map((item, index) => (
-        <article className="flex flex-col gap-4">
-          
-          <header>
-           <button onClick={() => handleClick(index)}>
-            <h1 className="flex gap-4 text-xl font-semibold items-center">
-              {item.label}
-              <span className="block">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7m14-8l-7 7-7-7"/>
-                </svg>
-              </span>
-            </h1>
-           </button>
-          </header>
-          {showMenu[index] && (
-            <section className="flex gap-2">
-              {item.content.map((content) => (
-              <div className="w-52 h-48 bg-black text-white p-2">
-                <p>
-                  {content.sub_content}
-                </p>
-              </div>
-              ))}
-            </section>
-          )}
-        </article>
-        ))} */}
-
-
          {items.map((item, index) => (
         <article className="flex flex-col gap-4">
           
@@ -183,12 +149,49 @@ const App = () => {
                 <textarea className="w-52 h-48 bg-black text-white p-2" id="hl7Data" name="hl7Data" onKeyUp={handleHL7Change}></textarea>
               </form>
               <div className="w-[700px] h-48 bg-black text-white p-2 overflow-y-scroll">
-                <pre>{JSON.stringify(jsonData, null, 2)}</pre>
+                <p>{JSON.stringify(jsonData, null, 2)}</p>
               </div>
             </section>
           )}
         </article>
-        ))} 
+        ))}
+
+
+        <section>
+        {jsonData && (
+          <ul className="flex flex-col gap-4">
+            <p className="-mb-2 mt-3">
+              MSH:
+            </p>
+            <li className="flex flex-col gap-1 h-auto">
+              <span className="ml-8">{jsonData.msh.msh_1_fieldSeparator}</span>
+              <span className="ml-8">{jsonData.msh.msh_2_encodingCharacters}</span>
+              <span className="ml-8">SENDING_APPLICATION</span>
+              <span className="ml-8">SENDING_FACILITY</span>
+              <span className="ml-8">RECEIVING_APPLICATION</span>
+              <span className="ml-8">RECEIVING_FACILITY</span>
+              <span className="ml-8">202403242034-04</span>
+              <span className="ml-8">ADT</span>
+              <span className="ml-8">76833</span>
+              <span className="ml-8">P</span>
+              <span className="ml-8">2.5</span>
+              <span className="ml-8">AL</span>
+              <span className="ml-8">NE</span>
+              <span className="ml-8">AUS</span>
+              <span className="ml-8">ASCII</span>
+              <span className="ml-8">EN</span>
+            </li>
+            <p className="-mb-2 mt-3">
+              PID:
+            </p>
+            <li class="flex flex-col gap-1 h-auto">
+              <span className="ml-8">1</span>
+              <span className="ml-8">PATIENT_ID</span>
+              <span className="ml-8">PATIENT_NAME</span>
+            </li>
+          </ul>
+          )}
+        </section>
 
 
         </section>
