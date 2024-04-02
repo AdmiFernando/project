@@ -1,0 +1,111 @@
+2022-01-21 15:37:56.156  INFO 22544 --- [main] app.Hl7ConverterApplication              : Starting Hl7ConverterApplication on TDS-6S03K with PID 22544 (C:\Users\betancof\HL7_Converter\HL7Converter\target\classes started by betancof in C:\Users\betancof\HL7_Converter\HL7Converter)
+2022-01-21 15:37:56.165  INFO 22544 --- [main] app.Hl7ConverterApplication              : No active profile set, falling back to default profiles: default
+2022-01-21 15:37:57.040  INFO 22544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-21 15:37:57.048  INFO 22544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-21 15:37:57.053  INFO 22544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-01-21 15:37:57.190  INFO 22544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-21 15:37:57.190  INFO 22544 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 987 ms
+2022-01-21 15:37:57.331  INFO 22544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-21 15:37:57.525  INFO 22544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-21 15:37:57.529  INFO 22544 --- [main] app.Hl7ConverterApplication              : Started Hl7ConverterApplication in 1.693 seconds (JVM running for 2.673)
+2022-01-21 15:37:57.537  INFO 22544 --- [main] ca.uhn.hl7v2.util.Home                   : hapi.home is set to C:\Users\betancof\HL7_Converter\HL7Converter\.
+2022-01-21 15:37:57.551  INFO 22544 --- [main] ca.uhn.hl7v2.VersionLogger               : HAPI version is: 2.2
+2022-01-21 15:37:57.556  INFO 22544 --- [main] ca.uhn.hl7v2.VersionLogger               : Default Structure libraries found for HL7 versions 2.1, 2.2, 2.3, 2.4, 2.5, 2.5.1, 2.6, 
+2022-01-21 15:38:48.630  INFO 22544 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-21 15:38:48.631  INFO 22544 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-21 15:38:48.635  INFO 22544 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-01-21 15:39:16.350  INFO 22544 --- [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-01-21 15:39:16.352  INFO 22544 --- [RMI TCP Connection(7)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-21 15:39:25.741  INFO 772 --- [main] app.Hl7ConverterApplication              : Starting Hl7ConverterApplication on TDS-6S03K with PID 772 (C:\Users\betancof\HL7_Converter\HL7Converter\target\classes started by betancof in C:\Users\betancof\HL7_Converter\HL7Converter)
+2022-01-21 15:39:25.743  INFO 772 --- [main] app.Hl7ConverterApplication              : No active profile set, falling back to default profiles: default
+2022-01-21 15:39:26.536  INFO 772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-21 15:39:26.543  INFO 772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-21 15:39:26.543  INFO 772 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-01-21 15:39:26.676  INFO 772 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-21 15:39:26.676  INFO 772 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 900 ms
+2022-01-21 15:39:26.802  INFO 772 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-21 15:39:26.992  INFO 772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-21 15:39:26.994  INFO 772 --- [main] app.Hl7ConverterApplication              : Started Hl7ConverterApplication in 1.566 seconds (JVM running for 2.528)
+2022-01-21 15:39:27.002  INFO 772 --- [main] ca.uhn.hl7v2.util.Home                   : hapi.home is set to C:\Users\betancof\HL7_Converter\HL7Converter\.
+2022-01-21 15:39:27.014  INFO 772 --- [main] ca.uhn.hl7v2.VersionLogger               : HAPI version is: 2.2
+2022-01-21 15:39:27.018  INFO 772 --- [main] ca.uhn.hl7v2.VersionLogger               : Default Structure libraries found for HL7 versions 2.1, 2.2, 2.3, 2.4, 2.5, 2.5.1, 2.6, 
+2022-01-21 15:39:30.809  INFO 772 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-21 15:39:30.809  INFO 772 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-21 15:39:30.814  INFO 772 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-01-21 15:40:48.304  INFO 772 --- [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-01-21 15:40:48.307  INFO 772 --- [RMI TCP Connection(7)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-21 15:40:54.303  INFO 22628 --- [main] app.Hl7ConverterApplication              : Starting Hl7ConverterApplication on TDS-6S03K with PID 22628 (C:\Users\betancof\HL7_Converter\HL7Converter\target\classes started by betancof in C:\Users\betancof\HL7_Converter\HL7Converter)
+2022-01-21 15:40:54.306  INFO 22628 --- [main] app.Hl7ConverterApplication              : No active profile set, falling back to default profiles: default
+2022-01-21 15:40:55.097  INFO 22628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-21 15:40:55.104  INFO 22628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-21 15:40:55.104  INFO 22628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-01-21 15:40:55.240  INFO 22628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-21 15:40:55.240  INFO 22628 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 903 ms
+2022-01-21 15:40:55.376  INFO 22628 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-21 15:40:55.552  INFO 22628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-21 15:40:55.555  INFO 22628 --- [main] app.Hl7ConverterApplication              : Started Hl7ConverterApplication in 1.554 seconds (JVM running for 2.454)
+2022-01-21 15:40:55.562  INFO 22628 --- [main] ca.uhn.hl7v2.util.Home                   : hapi.home is set to C:\Users\betancof\HL7_Converter\HL7Converter\.
+2022-01-21 15:40:55.574  INFO 22628 --- [main] ca.uhn.hl7v2.VersionLogger               : HAPI version is: 2.2
+2022-01-21 15:40:55.578  INFO 22628 --- [main] ca.uhn.hl7v2.VersionLogger               : Default Structure libraries found for HL7 versions 2.1, 2.2, 2.3, 2.4, 2.5, 2.5.1, 2.6, 
+2022-01-21 15:40:59.510  INFO 22628 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-21 15:40:59.511  INFO 22628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-21 15:40:59.516  INFO 22628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-01-21 15:40:59.943 ERROR 22628 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: ca.uhn.hl7v2.model.v23.message.ORU_R01 cannot be cast to ca.uhn.hl7v2.model.v23.message.ORM_O01] with root cause
+
+java.lang.ClassCastException: ca.uhn.hl7v2.model.v23.message.ORU_R01 cannot be cast to ca.uhn.hl7v2.model.v23.message.ORM_O01
+	at app.hl7.v23.CustomORM_O01v23.createJsonFromHL7(CustomORM_O01v23.java:129) ~[classes/:na]
+	at app.generator.JsonFactory.transformHL7ToJson(JsonFactory.java:21) ~[classes/:na]
+	at app.controllers.GeneratorController.getRawHL7(GeneratorController.java:116) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_311]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_311]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_311]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_311]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_311]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_311]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_311]
+
+2022-01-21 15:49:02.049  INFO 22628 --- [RMI TCP Connection(7)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-01-21 15:49:02.052  INFO 22628 --- [RMI TCP Connection(7)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
