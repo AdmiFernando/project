@@ -34,7 +34,7 @@ const App = () => {
       }
       const jsonData = await response.json();
       setJsonData(jsonData);
-      
+
       console.log(jsonData)
     } catch (error) {
       console.error('Error:', error);
@@ -48,10 +48,10 @@ const App = () => {
         <Header />
       </header>
 
-      <main className="flex flex-col gap-3 px-1">
+      <main className="flex flex-col">
 
         {/* First section - Home */}
-        <section className="flex lg:h-auto h-[100vh] md:h-[600px] relative shadow-section">
+        <section className="flex lg:h-screen md:h-[600px] relative shadow-section">
 
           <article className="w-[80%] md:w-[40%] lg:w-[30%] h-auto flex flex-col justify-center px-4 md:px-1 text-center gap-5 md:gap-10 bg-white">
             <h2 className="text-[rgba(0,0,0,0.6)] font-extrabold md:text-3xl text-2xl pb-3 md:pt-[0vh] pt-[5vh]">
@@ -76,55 +76,106 @@ const App = () => {
         </section>
 
         {/* Second section - About */}
-        <section className="bg-[#062132] w-full py-10 px-6 shadow-section text-white" id="about">
+        <section className="bg-[#062132] lg:h-screen w-full py-10 px-6 shadow-section text-white" id="about">
           <header className="text-center">
             <h1 className="text-5xl">About Us</h1>
           </header>
-          <article className="mt-14 flex lg:flex-row flex-col-reverse lg:items-start items-center justify-center gap-4 lg:gap-28">
-            <div className="mt-16">
-              <Image
-                src="/tech-img.svg"
-                alt="Vercel Logo"
-                width={350}
-                height={350}
-                className="md:px-0 px-4"
-              />
-            </div>
-            <section className="grid grid-cols-2 w-[100%] lg:w-[50%] gap-16 text-center">
-              <article className="col-span-2 lg:col-start-2 flex flex-col gap-2 w-full lg:w-64">
-                <h5 className="text-center text-4xl tracking-widest font-thin">
-                  Who we are
+          <h2 className="text-center text-3xl tracking-widest font-thin py-10">
+            Our company work to offer a innovative and efficient solution in the field of web
+            development. We have the following abilities:
+          </h2>
+          <article className="mt-1 flex lg:flex-row flex-col-reverse lg:items-start items-center justify-center gap-4 lg:gap-28">
+            <section className="grid grid-cols-3 w-[100%] lg:w-[50%] gap-10 text-center">
+              <article id="intec" className=" flex flex-col gap-2 w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
+                <div className="">
+                  <Image
+                    src="/more.jpg"
+                    alt="More Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h5 className="text-center text-3xl tracking-widest font-thin">
+                Name 1
                 </h5>
-                <p className="leading-7 text-[rgba(255,255,255,0.55)] text-lg">
-                  On sait depuis longtempsque travailler avec du textelisible et contenant du sensest source de distractions,et empêche de seconcentrer sur la mise enpage elle-même.
-                </p>
               </article>
-              <article className="col-start-1 md:col-span-1 col-span-2 flex flex-col gap-2 -mt-0 lg:-mt-[100px] w-full lg:w-64 md:row-start-2 row-start-3">
-                <h5 className="text-center text-4xl tracking-widest font-thin lg:text-start">
-                  Mission
+              <article id="intec" className=" flex flex-col gap-2 w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
+              <div className="">
+                  <Image
+                    src="/more.jpg"
+                    alt="More Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h5 className="text-center text-3xl tracking-widest font-thin">
+                Name 2
                 </h5>
-                <p className="leading-7 text-[rgba(255,255,255,0.55)] text-lg">
-                  On sait depuis longtempsque travailler avec du textelisible et contenant du sensest source de distractions,et empêche de seconcentrer sur la mise enpage elle-même.
-                </p>
               </article>
-              <article className="col-start-1 md:col-start-2 md:col-span-1 col-span-2 md:row-start-2 row-start-2 flex flex-col gap-2 w-full lg:w-64">
-                <h5 className="text-center text-4xl tracking-widest font-thin">
-                  Vision
+              <article id="intec" className=" flex flex-col gap-2 w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
+              <div className="">
+                  <Image
+                    src="/more.jpg"
+                    alt="More Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h5 className="text-center text-3xl tracking-widest font-thin">
+                Name 3
                 </h5>
-                <p className="leading-7 text-[rgba(255,255,255,0.55)] text-lg">
-                  On sait depuis longtemps
-                  que travailler avec du texte
-                  lisible et contenant du sens
-                  est source de distractions,
-                  et empêche de se.
-                </p>
+              </article>
+              <article id="intec" className=" gap-2 md:col-span-1 col-span-2 md:row-start-2 row-start-2 flex flex-col  w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
+              <div className="">
+                  <Image
+                    src="/more.jpg"
+                    alt="More Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h5 className="text-center text-3xl tracking-widest font-thin">
+                Name 4
+                </h5>
+              </article>
+              <article id="intec" className=" gap-2 md:col-span-1 col-span-2 md:row-start-2 row-start-2 flex flex-col w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
+              <div className="">
+                  <Image
+                    src="/more.jpg"
+                    alt="More Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h5 className="text-center text-3xl tracking-widest font-thin">
+                Name 5
+                </h5>
+              </article>
+              <article id="intec" className=" gap-2 md:col-span-1 col-span-2 md:row-start-2 row-start-2 flex flex-col  w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
+              <div className="">
+                  <Image
+                    src="/more.jpg"
+                    alt="More Logo"
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h5 className="text-center text-3xl tracking-widest font-thin">
+                Name 6
+                </h5>
               </article>
             </section>
           </article>
         </section>
 
         {/* Third section - Expertise */}
-        <section className="bg-white w-full h-auto shadow-section p-4" id="expertise">
+        <section className="bg-white w-full lg:h-screen shadow-section p-4" id="expertise">
           <section>
 
             <section className="flex gap-2 flex-col md:flex-row w-full">
@@ -191,7 +242,7 @@ const App = () => {
                 </li>
 
                 <p className="-mb-2 mt-3">
-                hd_msh_3_sendingApplication:
+                  hd_msh_3_sendingApplication:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -206,7 +257,7 @@ const App = () => {
                 </li>
 
                 <p className="-mb-2 mt-3">
-                hd_msh_3_sendingApplication:
+                  hd_msh_3_sendingApplication:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -222,7 +273,7 @@ const App = () => {
 
 
                 <p className="-mb-2 mt-3">
-                hd_msh_4_sendingFacility:
+                  hd_msh_4_sendingFacility:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -236,9 +287,9 @@ const App = () => {
                   </span>
                 </li>
 
-              
+
                 <p className="-mb-2 mt-3">
-                hd_msh_5_receivingApplication:
+                  hd_msh_5_receivingApplication:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -251,9 +302,9 @@ const App = () => {
                     {jsonData.msh.hd_msh_5_receivingApplication.hd_3_universalIdType || "null"}
                   </span>
                 </li>
-              
+
                 <p className="-mb-2 mt-3">
-                hd_msh_6_receivingFacility:
+                  hd_msh_6_receivingFacility:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -327,9 +378,9 @@ const App = () => {
                   </span>
                 </li>
 
-                
+
                 <p className="-mb-2 mt-3">
-                pt_msh_11_processingId:
+                  pt_msh_11_processingId:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -339,9 +390,9 @@ const App = () => {
                     {jsonData.msh.pt_msh_11_processingId.pt_2_processingMode || "null"}
                   </span>
                 </li>
-                                
+
                 <p className="-mb-2 mt-3">
-                ts_msh_7_dateTimeOfMessage:
+                  ts_msh_7_dateTimeOfMessage:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -364,7 +415,7 @@ const App = () => {
         </section>
 
         {/* Section - Footer */}
-        <section className="flex w-full h-full relative shadow-section" id="contact">
+        <section className="flex w-full lg:h-screen relative shadow-section" id="contact">
           <article className="w-[80%] md:w-[60%] lg:w-[30%] flex flex-col justify-center px-4 md:px-16 gap-10 bg-[#062132] text-left pt-48 pb-24">
             <h2 className="text-white font-extrabold text-5xl pb-6">
               Get in touch.
