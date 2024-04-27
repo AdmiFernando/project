@@ -1,6 +1,12 @@
 'use client'
 import React from "react";
 import Header from "./components/header";
+import ExcludeWindows from "./components/modalexclude";
+import LanguaguesWindows from "./components/modallanguages";
+import ControlWindows from "./components/modalcontrol";
+import DatabaseWindows from "./components/modaldatabase";
+import ExpertiseWindows from "./components/modalexpertise";
+import ProjectWindows from "./components/modalproject";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -23,7 +29,7 @@ const App = () => {
     setHL7Data(hl7Data);
 
     try {
-      const response = await fetch('http://localhost:5000/hl7tojson', {
+      const response = await fetch('http://localhost:3000/hl7tojson', {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain' },
         body: hl7Data
@@ -48,10 +54,10 @@ const App = () => {
         <Header />
       </header>
 
-      <main className="flex flex-col">
+      <main className="flex flex-col gap-3">
 
         {/* First section - Home */}
-        <section className="flex lg:h-screen md:h-[600px] relative shadow-section">
+        <section className="flex lg:h-auto h-[100vh] md:h-[600px] relative shadow-section">
 
           <article className="w-[80%] md:w-[40%] lg:w-[30%] h-auto flex flex-col justify-center px-4 md:px-1 text-center gap-5 md:gap-10 bg-white">
             <h2 className="text-[rgba(0,0,0,0.6)] font-extrabold md:text-3xl text-2xl pb-3 md:pt-[0vh] pt-[5vh]">
@@ -74,108 +80,85 @@ const App = () => {
 
 
         </section>
-
-        {/* Second section - About */}
-        <section className="bg-[#062132] lg:h-screen w-full py-10 px-6 shadow-section text-white" id="about">
-          <header className="text-center">
-            <h1 className="text-5xl">About Us</h1>
-          </header>
-          <h2 className="text-center text-3xl tracking-widest font-thin py-10">
-            Our company work to offer a innovative and efficient solution in the field of web
-            development. We have the following abilities:
-          </h2>
-          <article className="mt-1 flex lg:flex-row flex-col-reverse lg:items-start items-center justify-center gap-4 lg:gap-28">
-            <section className="grid grid-cols-3 w-[100%] lg:w-[50%] gap-10 text-center">
-              <article id="intec" className=" flex flex-col gap-2 w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
-                <div className="">
+        
+        {/* Section - About Us */}
+        <section id="about" className="w-full lg:h-screen md:h-[600px] relative shadow-section text-white bg-[#062132] ">
+        <div className="flex flex-col justify-center items-center  text-white m-5">
+            <header className="text-center m-0 max-sm:m-2">
+              <h1 className="text-5xl">About Us</h1>
+            </header>
+            <h2 className="text-center text-3xl tracking-widest font-thin m-0 max-sm:m-2">
+              Our company work to offer a innovative and efficient solution in the field of web
+              development. We have the following abilities:
+            </h2>
+            <div className="flex justify-evenly self-center w-[90%] gap-2 flex-grow[2] flex-wrap m-0">
+            <article id="frame" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
                   <Image
-                    src="/more.jpg"
+                    src="/pngwing.com.png"
                     alt="More Logo"
                     width={1920}
                     height={1080}
-                    className="w-full h-full object-cover"
+                    className="w-[45%] object-cover"
                   />
-                </div>
-                <h5 className="text-center text-3xl tracking-widest font-thin">
-                Name 1
-                </h5>
-              </article>
-              <article id="intec" className=" flex flex-col gap-2 w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
-              <div className="">
+                  <LanguaguesWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
                   <Image
-                    src="/more.jpg"
-                    alt="More Logo"
+                    src="/control.png"
+                    alt="Project Logo"
                     width={1920}
                     height={1080}
-                    className="w-full h-full object-cover"
+                    className="w-[55%] object-cover"
                   />
-                </div>
-                <h5 className="text-center text-3xl tracking-widest font-thin">
-                Name 2
-                </h5>
-              </article>
-              <article id="intec" className=" flex flex-col gap-2 w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
-              <div className="">
+                <ControlWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
                   <Image
-                    src="/more.jpg"
-                    alt="More Logo"
+                    src="/project.png"
+                    alt="Project Logo"
                     width={1920}
                     height={1080}
-                    className="w-full h-full object-cover"
+                    className="w-[50%] object-cover"
                   />
-                </div>
-                <h5 className="text-center text-3xl tracking-widest font-thin">
-                Name 3
-                </h5>
-              </article>
-              <article id="intec" className=" gap-2 md:col-span-1 col-span-2 md:row-start-2 row-start-2 flex flex-col  w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
-              <div className="">
+                <ProjectWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
                   <Image
-                    src="/more.jpg"
-                    alt="More Logo"
+                    src="/database.png"
+                    alt="database Logo"
                     width={1920}
                     height={1080}
-                    className="w-full h-full object-cover"
+                    className="w-[40%] object-cover"
                   />
-                </div>
-                <h5 className="text-center text-3xl tracking-widest font-thin">
-                Name 4
-                </h5>
-              </article>
-              <article id="intec" className=" gap-2 md:col-span-1 col-span-2 md:row-start-2 row-start-2 flex flex-col w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
-              <div className="">
+                <DatabaseWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
                   <Image
-                    src="/more.jpg"
-                    alt="More Logo"
+                    src="/expertise.png"
+                    alt="Expertise Logo"
                     width={1920}
                     height={1080}
-                    className="w-full h-full object-cover"
+                    className="w-[55%] object-cover"
                   />
-                </div>
-                <h5 className="text-center text-3xl tracking-widest font-thin">
-                Name 5
-                </h5>
-              </article>
-              <article id="intec" className=" gap-2 md:col-span-1 col-span-2 md:row-start-2 row-start-2 flex flex-col  w-full lg:w-64 hover:scale-110 hover:text-[rgba(12,204,60,0.6)] cursor-pointer">
-              <div className="">
+                <ExpertiseWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
                   <Image
-                    src="/more.jpg"
-                    alt="More Logo"
+                    src="/excluded.png"
+                    alt="Exclude Logo"
                     width={500}
                     height={500}
-                    className="w-full h-full object-cover"
+                    className="w-[40%] object-cover"
                   />
-                </div>
-                <h5 className="text-center text-3xl tracking-widest font-thin">
-                Name 6
-                </h5>
-              </article>
-            </section>
-          </article>
+                <ExcludeWindows/>
+            </article>
+          </div>
+        </div>
+            
         </section>
 
-        {/* Third section - Expertise */}
-        <section className="bg-white w-full lg:h-screen shadow-section p-4" id="expertise">
+        {/* Third section - Expertise
+        <section className="bg-white w-full shadow-section p-4" id="expertise">
           <section>
 
             <section className="flex gap-2 flex-col md:flex-row w-full">
@@ -410,25 +393,23 @@ const App = () => {
 
             )}
           </section>
-
-
-        </section>
+        </section> */}
 
         {/* Section - Footer */}
-        <section className="flex w-full lg:h-screen relative shadow-section" id="contact">
-          <article className="w-[80%] md:w-[60%] lg:w-[30%] flex flex-col justify-center px-4 md:px-16 gap-10 bg-[#062132] text-left pt-48 pb-24">
-            <h2 className="text-white font-extrabold text-5xl pb-6">
+        <section className="flex lg:h-auto h-[100vh] md:h-[600px] relative shadow-section" id="contact">
+          <article className="w-[80%] md:w-[60%] lg:w-[30%] flex flex-col justify-center px-4 md:px-16 gap-10 bg-white text-[#062132] text-left pt-48 pb-24">
+            <h2 className=" font-extrabold text-5xl pb-6">
               Get in touch.
             </h2>
-            <p className="text-lg text-[rgba(255,255,255,0.75)]">
+            <p className="text-lg">
               On sait depuis longtemps que travailleravec du texte lisible et contenant dusens est source de distractions, etempêche de se concentrer sur la miseen page elle-même
             </p>
 
             <div className="flex flex-col">
-              <a href="#" className="text-lg font-thin text-[rgba(255,255,255,0.75)]">
+              <a href="#" className="text-lg font-thin">
                 +19143386828
               </a>
-              <a href="#" className="text-lg font-thin text-[rgba(255,255,255,0.75)]">
+              <a href="#" className="text-lg font-thin">
                 Codecraft@gmail.com
               </a>
             </div>
