@@ -1,6 +1,12 @@
 'use client'
 import React from "react";
 import Header from "./components/header";
+import ExcludeWindows from "./components/modalexclude";
+import LanguaguesWindows from "./components/modallanguages";
+import ControlWindows from "./components/modalcontrol";
+import DatabaseWindows from "./components/modaldatabase";
+import ExpertiseWindows from "./components/modalexpertise";
+import ProjectWindows from "./components/modalproject";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -23,7 +29,7 @@ const App = () => {
     setHL7Data(hl7Data);
 
     try {
-      const response = await fetch('http://localhost:5000/hl7tojson', {
+      const response = await fetch('http://localhost:3000/hl7tojson', {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain' },
         body: hl7Data
@@ -34,7 +40,7 @@ const App = () => {
       }
       const jsonData = await response.json();
       setJsonData(jsonData);
-      
+
       console.log(jsonData)
     } catch (error) {
       console.error('Error:', error);
@@ -48,7 +54,7 @@ const App = () => {
         <Header />
       </header>
 
-      <main className="flex flex-col gap-3 px-1">
+      <main className="flex flex-col">
 
         {/* First section - Home */}
         <section className="flex lg:h-auto h-[100vh] md:h-[600px] relative shadow-section">
@@ -74,57 +80,85 @@ const App = () => {
 
 
         </section>
-
-        {/* Second section - About */}
-        <section className="bg-[#062132] w-full py-10 px-6 shadow-section text-white" id="about">
-          <header className="text-center">
-            <h1 className="text-5xl">About Us</h1>
-          </header>
-          <article className="mt-14 flex lg:flex-row flex-col-reverse lg:items-start items-center justify-center gap-4 lg:gap-28">
-            <div className="mt-16">
-              <Image
-                src="/tech-img.svg"
-                alt="Vercel Logo"
-                width={350}
-                height={350}
-                className="md:px-0 px-4"
-              />
-            </div>
-            <section className="grid grid-cols-2 w-[100%] lg:w-[50%] gap-16 text-center">
-              <article className="col-span-2 lg:col-start-2 flex flex-col gap-2 w-full lg:w-64">
-                <h5 className="text-center text-4xl tracking-widest font-thin">
-                  Who we are
-                </h5>
-                <p className="leading-7 text-[rgba(255,255,255,0.55)] text-lg">
-                  On sait depuis longtempsque travailler avec du textelisible et contenant du sensest source de distractions,et empêche de seconcentrer sur la mise enpage elle-même.
-                </p>
-              </article>
-              <article className="col-start-1 md:col-span-1 col-span-2 flex flex-col gap-2 -mt-0 lg:-mt-[100px] w-full lg:w-64 md:row-start-2 row-start-3">
-                <h5 className="text-center text-4xl tracking-widest font-thin lg:text-start">
-                  Mission
-                </h5>
-                <p className="leading-7 text-[rgba(255,255,255,0.55)] text-lg">
-                  On sait depuis longtempsque travailler avec du textelisible et contenant du sensest source de distractions,et empêche de seconcentrer sur la mise enpage elle-même.
-                </p>
-              </article>
-              <article className="col-start-1 md:col-start-2 md:col-span-1 col-span-2 md:row-start-2 row-start-2 flex flex-col gap-2 w-full lg:w-64">
-                <h5 className="text-center text-4xl tracking-widest font-thin">
-                  Vision
-                </h5>
-                <p className="leading-7 text-[rgba(255,255,255,0.55)] text-lg">
-                  On sait depuis longtemps
-                  que travailler avec du texte
-                  lisible et contenant du sens
-                  est source de distractions,
-                  et empêche de se.
-                </p>
-              </article>
-            </section>
-          </article>
+        
+        {/* Section - About Us */}
+        <section id="about" className="w-full lg:h-screen md:h-[600px] relative shadow-section text-white bg-[#062132] ">
+        <div className="flex flex-col justify-center items-center  text-white m-5">
+            <header className="text-center m-0 max-sm:m-2">
+              <h1 className="text-5xl">About Us</h1>
+            </header>
+            <h2 className="text-center text-3xl tracking-widest font-thin m-0 max-sm:m-2">
+              Our company work to offer a innovative and efficient solution in the field of web
+              development. We have the following abilities:
+            </h2>
+            <div className="flex justify-evenly self-center w-[90%] gap-2 flex-grow[2] flex-wrap m-0">
+            <article id="frame" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+                  <Image
+                    src="/pngwing.com.png"
+                    alt="More Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-[45%] object-cover"
+                  />
+                  <LanguaguesWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+                  <Image
+                    src="/control.png"
+                    alt="Project Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-[55%] object-cover"
+                  />
+                <ControlWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+                  <Image
+                    src="/project.png"
+                    alt="Project Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-[50%] object-cover"
+                  />
+                <ProjectWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+                  <Image
+                    src="/database.png"
+                    alt="database Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-[40%] object-cover"
+                  />
+                <DatabaseWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+                  <Image
+                    src="/expertise.png"
+                    alt="Expertise Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-[55%] object-cover"
+                  />
+                <ExpertiseWindows/>
+            </article>
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+                  <Image
+                    src="/excluded.png"
+                    alt="Exclude Logo"
+                    width={500}
+                    height={500}
+                    className="w-[40%] object-cover"
+                  />
+                <ExcludeWindows/>
+            </article>
+          </div>
+        </div>
+            
         </section>
 
-        {/* Third section - Expertise */}
-        <section className="bg-white w-full h-auto shadow-section p-4" id="expertise">
+        {/* Third section - Expertise
+        <section className="bg-white w-full shadow-section p-4" id="expertise">
           <section>
 
             <section className="flex gap-2 flex-col md:flex-row w-full">
@@ -191,7 +225,7 @@ const App = () => {
                 </li>
 
                 <p className="-mb-2 mt-3">
-                hd_msh_3_sendingApplication:
+                  hd_msh_3_sendingApplication:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -206,7 +240,7 @@ const App = () => {
                 </li>
 
                 <p className="-mb-2 mt-3">
-                hd_msh_3_sendingApplication:
+                  hd_msh_3_sendingApplication:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -222,7 +256,7 @@ const App = () => {
 
 
                 <p className="-mb-2 mt-3">
-                hd_msh_4_sendingFacility:
+                  hd_msh_4_sendingFacility:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -236,9 +270,9 @@ const App = () => {
                   </span>
                 </li>
 
-              
+
                 <p className="-mb-2 mt-3">
-                hd_msh_5_receivingApplication:
+                  hd_msh_5_receivingApplication:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -251,9 +285,9 @@ const App = () => {
                     {jsonData.msh.hd_msh_5_receivingApplication.hd_3_universalIdType || "null"}
                   </span>
                 </li>
-              
+
                 <p className="-mb-2 mt-3">
-                hd_msh_6_receivingFacility:
+                  hd_msh_6_receivingFacility:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -327,9 +361,9 @@ const App = () => {
                   </span>
                 </li>
 
-                
+
                 <p className="-mb-2 mt-3">
-                pt_msh_11_processingId:
+                  pt_msh_11_processingId:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -339,9 +373,9 @@ const App = () => {
                     {jsonData.msh.pt_msh_11_processingId.pt_2_processingMode || "null"}
                   </span>
                 </li>
-                                
+
                 <p className="-mb-2 mt-3">
-                ts_msh_7_dateTimeOfMessage:
+                  ts_msh_7_dateTimeOfMessage:
                 </p>
                 <li className="flex flex-col gap-1 h-auto">
                   <span className="ml-8">
@@ -359,25 +393,23 @@ const App = () => {
 
             )}
           </section>
-
-
-        </section>
+        </section> */}
 
         {/* Section - Footer */}
-        <section className="flex w-full h-full relative shadow-section" id="contact">
-          <article className="w-[80%] md:w-[60%] lg:w-[30%] flex flex-col justify-center px-4 md:px-16 gap-10 bg-[#062132] text-left pt-48 pb-24">
-            <h2 className="text-white font-extrabold text-5xl pb-6">
+        <section className="flex lg:h-auto h-[100vh] md:h-[600px] relative shadow-section" id="contact">
+          <article className="w-[80%] md:w-[60%] lg:w-[30%] flex flex-col justify-center px-4 md:px-16 gap-10 bg-white text-[#062132] text-left pt-48 pb-24">
+            <h2 className=" font-extrabold text-5xl pb-6">
               Get in touch.
             </h2>
-            <p className="text-lg text-[rgba(255,255,255,0.75)]">
+            <p className="text-lg">
               On sait depuis longtemps que travailleravec du texte lisible et contenant dusens est source de distractions, etempêche de se concentrer sur la miseen page elle-même
             </p>
 
             <div className="flex flex-col">
-              <a href="#" className="text-lg font-thin text-[rgba(255,255,255,0.75)]">
+              <a href="#" className="text-lg font-thin">
                 +19143386828
               </a>
-              <a href="#" className="text-lg font-thin text-[rgba(255,255,255,0.75)]">
+              <a href="#" className="text-lg font-thin">
                 Codecraft@gmail.com
               </a>
             </div>
