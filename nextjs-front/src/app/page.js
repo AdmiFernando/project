@@ -54,7 +54,7 @@ const App = () => {
         <Header />
       </header>
 
-      <main className="flex flex-col gap-3">
+      <main className="flex flex-col">
 
         {/* First section - Home */}
         <section className="flex lg:h-auto h-[100vh] md:h-[600px] relative shadow-section">
