@@ -57,9 +57,9 @@ const App = () => {
       <main className="flex flex-col">
 
         {/* First section - Home */}
-        <section className="flex lg:h-auto h-[100vh] md:h-[600px] relative shadow-section">
+        <section className="flex h-[100vh] relative shadow-section">
 
-          <article className="w-[80%] md:w-[40%] lg:w-[30%] h-auto flex flex-col justify-center px-4 md:px-1 text-center gap-5 md:gap-10 bg-white">
+          <article className="w-[80%] md:w-[40%] lg:w-[30%] flex flex-col justify-center px-4 md:px-1 text-center gap-5 md:gap-10 bg-white">
             <h2 className="text-[rgba(0,0,0,0.6)] font-extrabold md:text-3xl text-2xl pb-3 md:pt-[0vh] pt-[5vh]">
               We’re here to help you
             </h2>
@@ -82,17 +82,17 @@ const App = () => {
         </section>
         
         {/* Section - About Us */}
-        <section id="about" className="w-full lg:h-screen md:h-[600px] relative shadow-section text-white bg-[#062132] ">
-        <div className="flex flex-col justify-center items-center  text-white m-5">
-            <header className="text-center m-0 max-sm:m-2">
-              <h1 className="text-5xl">About Us</h1>
+        <section id="about" className="w-full h-[100vh] max-sm:h-[1720px] relative shadow-section text-white bg-[#062132] ">
+        <div className="flex flex-col max-sm:m-4 justify-center items-center  text-white">
+            <header className="text-center p-4">
+              <h1 className="md:text-4xl text-3xl">About Us</h1>
             </header>
-            <h2 className="text-center text-3xl tracking-widest font-thin m-0 max-sm:m-2">
+            <h2 className="text-center md:text-3xl text-2xl tracking-widest font-thin m-3">
               Our company work to offer a innovative and efficient solution in the field of web
               development. We have the following abilities:
             </h2>
-            <div className="flex justify-evenly self-center w-[90%] gap-2 flex-grow[2] flex-wrap m-0">
-            <article id="frame" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+            <div className="flex justify-center items-center self-center w-[90%] gap-2 flex-grow[2] flex-wrap m-4">
+            <article id="frame" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] m-3 ">
                   <Image
                     src="/pngwing.com.png"
                     alt="More Logo"
@@ -102,7 +102,7 @@ const App = () => {
                   />
                   <LanguaguesWindows/>
             </article>
-            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] m-3">
                   <Image
                     src="/control.png"
                     alt="Project Logo"
@@ -112,7 +112,7 @@ const App = () => {
                   />
                 <ControlWindows/>
             </article>
-            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] m-3">
                   <Image
                     src="/project.png"
                     alt="Project Logo"
@@ -122,7 +122,7 @@ const App = () => {
                   />
                 <ProjectWindows/>
             </article>
-            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] m-3">
                   <Image
                     src="/database.png"
                     alt="database Logo"
@@ -132,17 +132,17 @@ const App = () => {
                   />
                 <DatabaseWindows/>
             </article>
-            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] m-2">
                   <Image
                     src="/expertise.png"
                     alt="Expertise Logo"
                     width={1920}
                     height={1080}
-                    className="w-[55%] object-cover"
+                    className="w-[40%] object-cover"
                   />
                 <ExpertiseWindows/>
             </article>
-            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] max-sm:m-2">
+            <article id="card" className="flex flex-col justify-center items-center w-[25%] max-sm:w-[100%] m-3">
                   <Image
                     src="/excluded.png"
                     alt="Exclude Logo"
@@ -396,7 +396,7 @@ const App = () => {
         </section> */}
 
         {/* Section - Footer */}
-        <section className="flex lg:h-auto h-[100vh] md:h-[600px] relative shadow-section" id="contact">
+        <section className="flex h-[100vh] relative shadow-section" id="contact">
           <article className="w-[80%] md:w-[60%] lg:w-[30%] flex flex-col justify-center px-4 md:px-16 gap-10 bg-white text-[#062132] text-left pt-48 pb-24">
             <h2 className=" font-extrabold text-5xl pb-6">
               Get in touch.
