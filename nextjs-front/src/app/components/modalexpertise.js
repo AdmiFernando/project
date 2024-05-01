@@ -8,7 +8,7 @@ export default function ExpertiseWindows() {
     <>
     <div className='flex flex-row justify-center items-center text-white'>
 
-      <h5 className="w-[60%] max-sm:w-[65%] text-center m-0 text-3xl tracking-widest font-thin hover:text-[#1F803F]">
+      <h5 className="w-[60%] max-sm:w-[65%] text-center m-0 md:text-3xl text-2xl tracking-widest font-thin hover:text-[#1F803F]">
         Expertise
       </h5>
 
@@ -26,7 +26,7 @@ export default function ExpertiseWindows() {
             <div className="bg-[#062132] text-white flex flex-col items-center p-5 rounded w-full h-[100%] max-sm:w-[100%]">
 
             <header className="text-center p-5">
-              <h1 className="text-5xl">About Us</h1>
+              <h1 className="md:text-4xl text-3xl">About Us</h1>
             </header>
 
             <div className='flex flex-row max-sm:flex-col'>
@@ -34,7 +34,7 @@ export default function ExpertiseWindows() {
 
               <div className='flex flex-row items-center gap-0 m-0 text-white'>
 
-                  <h5 className="w-[50%] max-sm:w-[70%]  text-end m-0 p-2 text-3xl tracking-widest font-thin hover:text-[#1F803F]">
+                  <h5 className="w-[50%] max-sm:w-[70%]  text-end m-0 p-2 md:text-3xl text-2xl tracking-widest font-thin hover:text-[#1F803F]">
                     Expertise
                   </h5>
 

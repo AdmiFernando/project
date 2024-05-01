@@ -8,7 +8,7 @@ export default function ControlWindows() {
     <>
       <div className='flex flex-row justify-center items-center text-white'>
 
-        <h5 className="w-[55%] text-center m-0 text-3xl tracking-widest font-thin hover:text-[#1F803F]">
+        <h5 className="w-[45%] text-center m-0 md:text-3xl text-2xl tracking-widest font-thin hover:text-[#1F803F]">
         Version Control
         </h5>
 
@@ -26,7 +26,7 @@ export default function ControlWindows() {
             <div className="bg-[#062132] text-white flex flex-col items-center p-5 rounded w-full h-full max-sm:w-[100%] ">
 
               <header className="text-center p-5">
-                <h1 className="text-5xl">About Us</h1>
+                <h1 className="md:text-4xl text-3xl">About Us</h1>
               </header>
 
               <div className='flex flex-row max-sm:flex-col'>
@@ -34,7 +34,7 @@ export default function ControlWindows() {
                 
               <div className='flex flex-row items-center gap-0 text-white'>
 
-                <h5 className="w-[50%] max-sm:w-[100%] text-center m-0 text-3xl tracking-widest font-thin hover:text-[#1F803F]">
+                <h5 className="w-[50%] max-sm:w-[100%] text-center m-0 md:text-3xl text-2xl tracking-widest font-thin hover:text-[#1F803F]">
                   Version Control
                 </h5>
 
@@ -49,7 +49,7 @@ export default function ControlWindows() {
                 <div className='m-5 flex flex-col justify-center'>
                   <div className='m-2'>
 
-                    <p className='text-3xl text-justify max-sm:m-0 max-sm:p-5 m-5'>Skilled in utilizing GIT, SVN, and CVS for efficient code version management
+                    <p className='md:text-3xl text-2xl text-justify max-sm:m-0 max-sm:p-5 m-5'>Skilled in utilizing GIT, SVN, and CVS for efficient code version management
                     </p>
                   </div>
                   </div>

@@ -48,12 +48,12 @@ const Header = () => {
                 {/* <NavLink className="border-b-2 pb-0.5" href='#expertise'>Expertise</NavLink> */}
                 <NavLink className="border-b-2 pb-0.5" href='#contact'>Contact</NavLink>
               </ul>
-              <NavLink href="#frame">Languages/Frameworks</NavLink>
-              <NavLink href="#">Database Management</NavLink>
-              <NavLink href="#">Version Control</NavLink>
-              <NavLink href="#">Expertise</NavLink>
-              <NavLink href="#">Project Management</NavLink>
-              <NavLink href="#">Excluded Services</NavLink>
+              <NavLink href="#about">Languages/Frameworks</NavLink>
+              <NavLink href="#about">Database Management</NavLink>
+              <NavLink href="#about">Version Control</NavLink>
+              <NavLink href="#about">Expertise</NavLink>
+              <NavLink href="#about">Project Management</NavLink>
+              <NavLink href="#about">Excluded Services</NavLink>
             </ul>
         </div>
 
