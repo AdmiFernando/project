@@ -1,21 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@font-face {
+    font-family: 'MyFont';
+    src: url('../../public/font/arial_rounded.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    font-family: 'MyFont', sans-serif;
 }
 
 
-body{
-    background: rgba(0, 0, 0, .68);
-}
-
-
-.shadow-section{
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-}
