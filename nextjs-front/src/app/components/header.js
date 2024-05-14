@@ -1,38 +1,13 @@
 'use client'
 import React from "react";
-import NavLink from 'next/link';
+import { NavLink } from "react-router-dom";
 import Image from "next/image";
 import "./header.css";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Header = () => {   
 
   const [isActive, setIsActive] = useState(false);
-  
-  const [activeSection, setActiveSection] = useState('');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      const scrollPosition = window.scrollY;
-
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          const sectionId = section.getAttribute('id');
-          setActiveSection(sectionId);
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     
@@ -49,14 +24,14 @@ const Header = () => {
           </a>
         </div>
         <ul id="nav">
-          <NavLink id="link" href='#home' className={activeSection === 'home' ? 'active' : ''}>HOME</NavLink>
-          <NavLink id="link" href='#about' className={activeSection === 'about' ? 'active' : ''}>ABOUT US</NavLink>
-          <NavLink id="link" href='#service' className={activeSection === 'service' ? 'active' : ''}>SERVICE</NavLink>
-          <NavLink id="link" href='#work' className={activeSection === 'work' ? 'active' : ''}>WORK</NavLink>
-          <NavLink id="link" href='#contact' className={activeSection === 'contact' ? 'active' : ''}>CONTACT</NavLink>
-        </ul>
+          <NavLink id="link" to="/home" activeClass="active">HOME</NavLink>
+          <NavLink id="link" to="/about" activeClass="active">ABOUT US</NavLink>
+          <NavLink id="link" to="/service" activeClass="active">SERVICE</NavLink>
+          <NavLink id="link" to="work" activeClass="active" >WORK</NavLink>
+          <NavLink id="link" to="/contact" activeClass="active">CONTACT</NavLink>
+        </ul> 
 
-        {/* <nav className="">
+         {/* <nav className="">
           <button onClick={() => setIsActive(!isActive)} className="flex items-center flex-col gap-2 ">
             <div className="h-0.5 w-10 bg-white"></div>
             <div className="h-0.5 w-10 bg-white"></div>
@@ -75,7 +50,7 @@ const Header = () => {
             <ul className="flex justify-center items-center flex-col h-full text-white gap-8 text-lg sm:text-xl md:text-2xl">
               <ul className="flex flex-wrap justify-center md:hidden gap-4 md:gap-10 items-center uppercase text-sm text-white lg:text-white font-semibold tracking-wider">
                 <NavLink className="border-b-2 pb-0.5" href='#about'>About Us</NavLink>
-                {/* <NavLink className="border-b-2 pb-0.5" href='#expertise'>Expertise</NavLink> */}
+                {/* <Link className="border-b-2 pb-0.5" href='#expertise'>Expertise</Link> */}
                 <NavLink className="border-b-2 pb-0.5" href='#contact'>Contact</NavLink>
               </ul>
               <NavLink href="#about">Languages/Frameworks</NavLink>

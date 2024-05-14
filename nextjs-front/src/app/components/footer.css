@@ -1,11 +1,9 @@
 #footer{
     position: fixed;
-    
 
     width: 35%;
     height: 500px;
     left: 2%;
-
     
     color: white;
     border-radius: 100% 100% 0 0;
@@ -65,3 +63,9 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    #footer{
+        width: 70%;
+        left: 0;
+    }
+}
