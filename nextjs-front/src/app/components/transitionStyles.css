@@ -1,24 +1,20 @@
 .fade-enter {
   opacity: 1;
-  transform: translateX(0);
-  transition: all 1000ms ease-out;
+  transition: opacity 1200ms;
 }
 
 .fade-enter-active {
   opacity: 1;
-  transform: scale(100%);
-  transition: all 1000ms ease-out;
+  transition: opacity 1200ms;
 }
 
 .fade-exit {
-  opacity: 1;
-  transform: translateX(100%);
-  transition: all 1000ms ease-out;
+  opacity: 0;
+  transition: opacity 1200ms;
 }
 
 
 .fade-exit-active {
   opacity: 0;
-  transform: scale(0);
-  transition: all 1000ms ease-out;
+  transition: opacity 1200ms;
 } 
