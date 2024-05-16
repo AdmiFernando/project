@@ -17,11 +17,22 @@ export default function ExpertiseWindows() {
 
               <div id='content-modal'>
               {/* Content Text */}
+
+              <div id='image'>
+                  <Image
+                    src="/expertise.png"
+                    alt="Expertise Logo"
+                    width={1920}
+                    height={1080}
+                    className="w-full object-cover"
+                  />
+              </div>
+
               <div className='content-text'>
 
               <div id='title-modal-text'>
 
-                  <h5 className="w-[50%] text-center m-0 text-3xl hover:text-[#12487E]">
+                  <h5 className="w-[50%] text-right m-0 text-3xl hover:text-[#12487E]">
                     Expertise
                   </h5>
 
@@ -74,15 +85,7 @@ export default function ExpertiseWindows() {
                 </div>
                 </div>
               
-              <div id='image'>
-                  <Image
-                    src="/expertise.png"
-                    alt="Expertise Logo"
-                    width={1920}
-                    height={1080}
-                    className="w-full object-cover"
-                  />
-              </div>
+
 
               </div>
 

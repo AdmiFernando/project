@@ -26,9 +26,9 @@ const Header = () => {
         <ul id="nav">
           <NavLink id="link" to="/home" activeClass="active">HOME</NavLink>
           <NavLink id="link" to="/about" activeClass="active">ABOUT US</NavLink>
-          <NavLink id="link" to="/service" activeClass="active">SERVICE</NavLink>
-          <NavLink id="link" to="/expertise" activeClass="active">EXPERTISE</NavLink>
-          <NavLink id="link" to="work" activeClass="active" >WORK</NavLink>
+          {/* <NavLink id="link" to="/service" activeClass="active">SERVICE</NavLink> */}
+          <NavLink id="link" to="/capabilities" activeClass="active">CAPABILITIES</NavLink>
+          {/* <NavLink id="link" to="work" activeClass="active" >WORK</NavLink> */}
           <NavLink id="link" to="/contact" activeClass="active">CONTACT</NavLink>
         </ul> 
 
