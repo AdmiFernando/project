@@ -1,6 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Contact = () => {
+  function sendEmail(name, email, msg, phone) {
+    axios.post('http://localhost:8080/api/sendMail', {
+        name: name,
+        email: email,
+        phone: phone,
+        msg: msg
+    })
+    .then(response => {
+        console.log(response.data);
+        alert('Message sent successfully!');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error sending message');
+    });
+  }
+
     // Effect Visible Section
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -9,79 +27,44 @@ const Contact = () => {
 //   Send Email
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [msg, setMessage] = useState('');
     const [phone, setPhone] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert('Form submitted!',  { name, email, message, phone });
-        setName('');
-        setEmail('');
-        setMessage('');
-        setPhone('');
-    };
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      sendEmail(name, email, msg, phone);
+  }
     
-    //     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', { name, email, message, phone }, 'YOUR_USER_ID')
-    //       .then((response) => {
-    //          console.log('SUCCESS!', response.status, response.text);
-    //          alert('Form submitted!');
-    //          setName('');
-    //          setEmail('');
-    //          setMessage('');
-    //          setPhone('');
-    //       }, (err) => {
-    //          console.log('FAILED...', err);
-    //          alert('Failed to send form. ' + err);
-    //       });
-    //   };
-
     return (
-        <section id='contact'  className={`my-component ${isVisible ? 'fade-enter-active' : 'fade-exit-active'}`}>
+        <section id='contact'   className={`my-component ${isVisible ? 'fadeEnter' : 'fadeExit'}`}>
             <div className="contact">
-            <h2>Contacto</h2>
+            <h2>CONTACT</h2>
             <form onSubmit={handleSubmit}>
                 <h3>SEND A MESSAGE</h3>`
                 <div id="form">
                     <div id="form-group">
                     <div>
-                    <label htmlFor="name">Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
+                    <label htmlFor="name">Name</label>
+                    <input type="name" id='name' value={name} onChange={e => setName(e.target.value)} placeholder="Fernan......" required />
+    
                 </div>
                 <div>
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id='email' value={email} onChange={e => setEmail(e.target.value)} placeholder="example@gmail.com" required />
                 </div>
                 <div>
-                    <label htmlFor="phone">Phone:</label>
-                    <input
-                        type="phone"
-                        id="phone"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                    />
+                    <label htmlFor="phone">Phone</label>
+                    <input type="phone" id='phone' value={phone} onChange={e => setPhone(e.target.value)} placeholder="+1 101........" required />
                 </div>
                     </div>
                 <div>
-                    <label htmlFor="message">Message:</label>
+                    <label htmlFor="message">Message</label>
                     <textarea
                         id="message"
                         cols={30}
                         rows={5}
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
+                        value={msg}
+                        onChange={e => setMessage(e.target.value)} placeholder="Hello......" required
                     ></textarea>
                 </div>
                 </div>

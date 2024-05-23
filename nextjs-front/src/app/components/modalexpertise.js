@@ -12,27 +12,15 @@ export default function ExpertiseWindows() {
       </h5>
         </button>
 
-        {/* Modal Pop-Up */}
-              <div id='modal' className={isActive ? "modal-active" : "modal-desactive"}>
+      {/* Pop-up window */}
+      <div id='modal' className={isActive ? "modal-active" : "modal-desactive"}>
 
-              <div id='content-modal'>
-              {/* Content Text */}
-
-              <div id='image'>
-                  <Image
-                    src="/expertise.png"
-                    alt="Expertise Logo"
-                    width={1920}
-                    height={1080}
-                    className="w-full object-cover"
-                  />
-              </div>
-
-              <div className='content-text'>
+                {/* container Text */}
+                <div className='container-text'>
 
               <div id='title-modal-text'>
 
-                  <h5 className="w-[50%] text-right m-0 text-3xl hover:text-[#12487E]">
+                  <h5 className="w-[20%] text-center m-0 text-3xl hover:text-[#12487E]">
                     Expertise
                   </h5>
 
@@ -45,42 +33,42 @@ export default function ExpertiseWindows() {
                 
               <div className='m-0 flex flex-col justify-center'>
 
-                      <h6 className='text-2xl text-justify'>
+                      <h6 className='text-xl text-justify'>
                         Relational DataBases:
                       </h6>
-                      <p className='text-[9px] text-justify'>
-                          ºExtensive experience in designing relational data models<i className='text-2xl'>.</i><br/>
-                          ºAdeptness in crafting Metadata Desings, including Entity-Attribute-Value (EAV) structures<i className='text-2xl'>.</i><br/>
-                          ºSkill in optimizing existing databases for enhanced performance<i className='text-2xl'>.</i> <br/>
-                          ºCapacity to scale up databases to accommodate growing needs<i className='text-2xl'>.</i> <br/>
+                      <p className='text-justify'>
+                          ºExtensive experience in designing relational data models.<br/>
+                          ºAdeptness in crafting Metadata Desings, including Entity-Attribute-Value (EAV) structures.<br/>
+                          ºSkill in optimizing existing databases for enhanced performance. <br/>
+                          ºCapacity to scale up databases to accommodate growing needs. <br/>
                       </p>
               
-                  <h6 className='text-2xl text-justify'>
+                  <h6 className='text-xl text-justify'>
                     Healthcare Interoperability:
                   </h6>
-                  <p className='text-[9px] text-justify'>
-                      ºProficiency in implementing healthcare interoperability standars such as HL7 or FHIR/HAPI<i className='text-2xl'>.</i> <br/>
+                  <p className='text-justify'>
+                      ºProficiency in implementing healthcare interoperability standars such as HL7 or FHIR/HAPI. <br/>
                   </p>
 
-                  <h6 className='text-2xl text-justify'>
+                  <h6 className='text-xl text-justify'>
                       Microservices:
                     </h6>
-                    <p className='text-[9px] text-justify'>
-                      ºKnowledgeable in designing and implementing microservices architecture<i className='text-2xl'>.</i> <br/>
+                    <p className='text-justify'>
+                      ºKnowledgeable in designing and implementing microservices architecture. <br/>
                     </p>
 
-                  <h6 className='text-2xl text-justify'>
+                  <h6 className='text-xl text-justify'>
                       Application Security:
                     </h6>
-                    <p className='text-[9px] text-justify'>
-                      ºExpertise in fortiying applications with security measures, including OAuth2 and LDAP integration<i className='text-2xl'>.</i> <br/>
+                    <p className='text-justify'>
+                      ºExpertise in fortiying applications with security measures, including OAuth2 and LDAP integration. <br/>
                     </p>
 
-                  <h6 className='text-2xl text-justify'>
+                  <h6 className='text-xl text-justify'>
                       End-to-End Development:
                     </h6>
-                    <p className='text-[9px] text-justify '>
-                      ºCapability to steer application development through all stagers, ensuring holistic solutions<i className='text-2xl'>.</i> <br/>
+                    <p className='text-justify '>
+                      ºCapability to steer application development through all stagers, ensuring holistic solutions. <br/>
                     </p>
                 </div>
                 </div>
@@ -88,8 +76,6 @@ export default function ExpertiseWindows() {
 
 
               </div>
-
-            </div>
     </>
   );
 }

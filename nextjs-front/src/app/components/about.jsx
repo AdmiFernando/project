@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,17 +8,22 @@ export default function About() {
     setIsVisible(true);
   }, []);
   return (
-    <section id='about' className={`my-component ${isVisible ? 'fade-enter-active' : 'fade-exit-active'}`}>
+    <section id='about'  className={`my-component ${isVisible ? 'fadeEnter' : 'fadeExit'}`}>
 
-    <div id='content-line4'>
-      <div id='line4'></div>
+    <div id='container-image'>
+      <Image
+          src="/NOSOTROS.png"
+          width={1920}
+          height={1080}
+          className="w-[100%] object-cover"
+        />
     </div>
 
   <div class="about">
     
     <h2>ABOUT US</h2>
 
-    <article id='conter-princ'>
+    <article id='contentPrinc'>
       <h3>WHO ARE WE?</h3>
 
       <div id='container'>
@@ -27,7 +33,6 @@ export default function About() {
             <br/>
           We are a team of professionals in constant evolution. We are passionate about developing innovative and efficient solutions. With transparent communication and focus on the end user, we are here to support you every step of the way, providing adivice and ongoing support even after the completion of your project.
           </p>
-        <a href='#'>Start Now</a>
       </article>
 
       <article id='msg'>
@@ -73,7 +78,7 @@ export default function About() {
 
         <article>
           <div id='icons'>
-          <svg className='fill-white items-center p-0 m-0 w-[100%]' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 3C21.5523 3 22 3.44772 22 4V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V19H20V7.3L12 14.5L2 5.5V4C2 3.44772 2.44772 3 3 3H21ZM8 15V17H0V15H8ZM5 10V12H0V10H5ZM19.5659 5H4.43414L12 11.8093L19.5659 5Z"></path></svg>
+          <svg className='fill-white items-center p-0 m-0 w-[100%]' stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 3C21.5523 3 22 3.44772 22 4V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V19H20V7.3L12 14.5L2 5.5V4C2 3.44772 2.44772 3 3 3H21ZM8 15V17H0V15H8ZM5 10V12H0V10H5ZM19.5659 5H4.43414L12 11.8093L19.5659 5Z"></path></svg>
             
           </div>
           <p id='number'><b>32+</b></p>
@@ -93,7 +98,7 @@ export default function About() {
       <div id='cont-princ-email'>
         <h4>SEND YOUR EMAIL!</h4>
         <div id='cont-email'>
-          <button id='icon-send'><svg className='fill-white p-0 m-0' stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 3C21.5523 3 22 3.44772 22 4V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V19H20V7.3L12 14.5L2 5.5V4C2 3.44772 2.44772 3 3 3H21ZM8 15V17H0V15H8ZM5 10V12H0V10H5ZM19.5659 5H4.43414L12 11.8093L19.5659 5Z"></path></svg></button>
+          <button id='icon-send'><svg className='fill-white p-0 m-0' stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 3C21.5523 3 22 3.44772 22 4V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V19H20V7.3L12 14.5L2 5.5V4C2 3.44772 2.44772 3 3 3H21ZM8 15V17H0V15H8ZM5 10V12H0V10H5ZM19.5659 5H4.43414L12 11.8093L19.5659 5Z"></path></svg></button>
         <input id='input-send' type='text'></input>
         </div>
       </div>

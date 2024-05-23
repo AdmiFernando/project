@@ -1,4 +1,4 @@
-
+/* Header Style */
 header{
     top: 0;
     left: 0;
@@ -14,10 +14,29 @@ header{
     z-index: 3;
 }
 
+/* Style Logo */
+
 #logo{
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 100%;
+    height: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+/* 
+#logo img{
+    width: auto;
+    height: auto;
+} */
+
+/* Style Space */
+#space-header{
+    width: 100%;
+    height: 15%;
+}
+
+/* Style Nav */
 
 #nav{
     width: 100%;
@@ -37,8 +56,10 @@ header{
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 20px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
+
+    transition: all 0.3s ease;
 }
 
 #link:hover{
@@ -46,6 +67,7 @@ header{
     background-color: rgba(167, 167, 167, 0.447);
 }
 
+/* Active Background-color Nav */
 .active{
     transform: scale(1.1);
     background-color: rgba(167, 167, 167, 0.447);

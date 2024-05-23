@@ -1,20 +1,9 @@
-.fade-enter {
+.fadeEnter {
   opacity: 1;
-  transition: opacity 1200ms;
+  transition: all 1s ease-in-out;
 }
 
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 1200ms;
-}
-
-.fade-exit {
+.fadeExit {
   opacity: 0;
-  transition: opacity 1200ms;
+  transition: all 1s ease-in-out;
 }
-
-
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 1200ms;
-} 
