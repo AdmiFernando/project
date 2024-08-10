@@ -1,0 +1,255 @@
+
+  /* Style Section About */
+  #about{
+    position: fixed;
+    background-color: white;
+  
+    width: 100%;
+    height: 100vh;
+  
+    color: black;
+    z-index: 2;
+  }
+  
+  #about .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    width: 92%;
+    height: 80%;
+    padding: 20px;
+  }
+  
+  #about .about h2{
+    font-size: 30px;
+    font-weight: 700;
+    width: 20%;
+  
+    text-align: center;
+    
+    color: rgb(18, 72, 126);
+    background-color: rgba(167, 167, 167, 0.325);
+  
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  
+    border-radius: 40px;
+  }
+  
+  #about .about #contentPrinc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    width: 65%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #about .about #contentPrinc h3{
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #about #contentPrinc #container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    padding: 0px;
+    margin: 0;
+  }
+  
+  #about #contentPrinc #container #text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 50%;
+    text-align: justify;
+    margin: 20px;
+  }
+  
+  #about #contentPrinc #container #msg{
+    width: 30%;
+    height: 100%;
+    text-align: justify;
+    margin: 20px;
+  }
+  
+  #about #contentPrinc #container #msg p{
+    font-size: 12px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px 0 20px 20px;
+    background-color: rgb(18, 72, 126);
+    color: white;
+  }
+  
+  #about #contentPrinc #selection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  
+    width: 80%;
+  }
+  
+  #about #contentPrinc #selection h3{
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  #about .about #contentPrinc #selection #cont-selec{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100%;
+  }
+  
+  #about .about #contentPrinc #selection #cont-selec article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #about .about #contentPrinc #selection #cont-selec article p{
+    font-size: 12px;
+  }
+  
+  #about .about #contentPrinc #selection #cont-selec article #icons{
+    background-color: rgb(18, 72, 126);
+    border-radius: 30px;
+  
+    padding: 5px;
+    margin: 0;
+  
+    width: 25%;
+  }
+
+  #about .about #contentPrinc #selection #cont-selec article #icons svg{
+    fill: white;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #about .about #contentPrinc #selection #cont-selec #linea{
+   width: 8px;
+   height: 70px;
+   margin-left: 20px;
+   margin-right: 20px;
+   background-color: rgb(18, 72, 126);
+   border-radius: 20px;
+  }
+
+  /* STYLE EMAIL */
+  
+  #about #email{
+    position: relative;
+    
+    width: 80%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  #about #email #cont-princ-email{
+    width: 30%;
+  }
+  
+  #about #email h4{
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  #about #email #cont-email{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  
+    width: 100%;
+    height: 27px;
+    padding: 5px;
+  
+    background-color: rgb(18, 72, 126);
+    border-radius: 20px;
+  
+    box-shadow: 5px 7px 1px rgb(168, 168, 168);
+  }
+
+  #about #email #cont-email #input-send{
+    width: 70%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+
+  #about #email #cont-email #input-send:hover{
+    border-bottom: 2px solid white;
+  }
+
+  #about #email #cont-email #input-send:focus{
+    outline: none;
+  }
+  
+  #about #email #cont-email #icon-send{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: none;
+
+    background-color: transparent;
+  
+    margin: 0;
+    padding: 0;
+  
+    width: 10%;
+    height: 100%;
+
+  }
+
+  #about #email #cont-email #icon-send:hover{
+    cursor: pointer;
+  }
+
+  #about #email #cont-email #icon-send:hover svg{
+    transform: scale(1.2);
+  }
+
+  #about #email #cont-email #icon-send svg{
+    width: 50px;
+    height: 50px;
+    transition: all 1s ease;
+    fill: white;
+  }
+  
+  /* STYLE IMAGE RIGHT */
+  #about #container-image{
+    position: absolute;
+  
+    width: 30%;
+    height: 100%;
+    
+    right: 0;
+    bottom: -15%;
+  }
+  
